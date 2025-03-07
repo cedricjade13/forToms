@@ -10,7 +10,7 @@ $userController = new UserController($conn);
 if (isset($_GET['id'])) {
     $user = $userController->viewUser  ($_GET['id']);
     if (!$user) {
-        die("User  not found");
+        die("User not found");
     }
 }
 
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // If there are no errors, proceed with user update
     if (empty($errors)) {
         if ($userController->updateUser  ($data['id'], $data)) {
-            $message = "User  updated successfully!";
+            $message = "Information updated successfully!";
             header("Location: index.php?message=" . urlencode($message)); // Redirect with message
             exit; // Ensure no further code is executed after redirect
         } else {
@@ -108,23 +108,50 @@ function country_dropdown($name, $selected = null) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Edit User</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+    <title>Edit Information</title>
     <style>
         .error {
             color: red; /* Set error message color to red */
             font-size: 0.9em; /* Optional: make the font size smaller */
         }
+
+        .sidebar a{
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        .sidebar h2{
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        .content{
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <h2>Navigation</h2>
-        <a href="index.php">User  List</a>
-        <a href="form.php">Add New User</a>
+        <h2><i class="fa-solid fa-sitemap"></i>  CJPG</h2>
+        <a href="index.php">Information  List</a>
+        <a href="form.php">Add New</a>
         <!-- Add more links as needed -->
     </div>
     <div class="content">
-        <h1>Edit User</h1>
+        <h1>Edit Information</h1>
         <form method="POST" action="edit.php?id=<?php echo $user['id']; ?>">
             <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
 

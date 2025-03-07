@@ -9,6 +9,6 @@ $userController = new UserController($conn);
 
 if (isset($_GET['id'])) {
     $userController->deleteUser ($_GET['id']);
-    header("Location: index.php?message=" . urlencode("User  deleted successfully!")); // Redirect after deletion
+    header("Location: index.php?message=" . urlencode("Information deleted successfully!")); // Redirect after deletion
 }
 ?>

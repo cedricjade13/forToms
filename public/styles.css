@@ -13,14 +13,14 @@ body {
     position: fixed;
     width: 220px;
     height: 100%;
-    background-color: #e0e0e0; /* Soft gray */
+    background-color: #000000; /* Soft gray */
     padding: 15px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
 .sidebar h2 {
-    color: #444; /* Darker gray */
+    color: #e9e5e5; /* Darker gray */
     margin-top: 0;
     text-align: center;
 }
@@ -28,7 +28,7 @@ body {
 .sidebar a {
     display: block;
     padding: 12px;
-    color: #333; /* Dark text */
+    color: #e9e5e5; /* Dark text */
     text-decoration: none;
     margin-bottom: 8px;
     border-radius: 5px;
@@ -37,6 +37,7 @@ body {
 
 .sidebar a:hover {
     background-color: #d6d6d6; /* Light gray on hover */
+    color: #000000;
 }
 
 /* Main Content */
@@ -54,11 +55,18 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #b0b0b0; /* Soft gray accent */
 }
 
-input, select, button {
-    width: 100%;
+input{
+    width: 97%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select, button {
+    width: 99.5%;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -120,7 +128,6 @@ th {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #b0b0b0; /* Neutral accent */
     width: calc(33.333% - 20px);
     box-sizing: border-box;
     transition: transform 0.2s ease-in-out;

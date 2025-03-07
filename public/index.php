@@ -23,7 +23,7 @@ $users = $userController->displayUsers();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>User List</title>
+    <title>Information List</title>
 </head>
     <style>
         .sidebar a{
@@ -50,8 +50,8 @@ $users = $userController->displayUsers();
 <body>
     <div class="sidebar">
         <h2><i class="fa-solid fa-sitemap"></i>  CJPG</h2>
-        <a href="index.php">User List</a>
-        <a href="form.php">Add New User</a>
+        <a href="index.php">Information List</a>
+        <a href="form.php">Add New</a>
         <!-- Add more links as needed -->
     </div>
     <div class="content">

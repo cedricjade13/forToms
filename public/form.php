@@ -70,13 +70,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errors)) {
         if (isset($data['id'])) {
             if ($userController->updateUser  ($data['id'], $data)) {
-                $message = "User  updated successfully!";
+                $message = "Information updated successfully!";
             } else {
                 $message = "Error updating user.";
             }
         } else {
             if ($userController->createUser  ($data)) {
-                $message = "User  created successfully!";
+                $message = "Information created successfully!";
             } else {
                 $message = "Error creating user.";
             }
@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <title>Add New User</title>
+    <title>Add New Information</title>
     <style>
         .error {
             color: red; /* Set error message color to red */
@@ -133,12 +133,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="sidebar">
         <h2><i class="fa-solid fa-sitemap"></i>  CJPG</h2>
-        <a href="index.php">User  List</a>
-        <a href="form.php">Add New User</a>
+        <a href="index.php">Information  List</a>
+        <a href="form.php">Add New</a>
         <!-- Add more links as needed -->
     </div>
     <div class="content">
-        <h1>Add New User</h1>
+        <h1>New Information</h1>
 
         <form method="POST" action="form.php">
             <input type="text" name="last_name" placeholder="Last Name" value="<?php echo htmlspecialchars($data['last_name'] ?? ''); ?>" required>
