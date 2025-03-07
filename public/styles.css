@@ -1,0 +1,288 @@
+/* General Styles */
+body {
+    display: flex;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light neutral background */
+    color: #333; /* Dark gray for text */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background-color: #e0e0e0; /* Soft gray */
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #444; /* Darker gray */
+    margin-top: 0;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    color: #333; /* Dark text */
+    text-decoration: none;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background-color: #d6d6d6; /* Light gray on hover */
+}
+
+/* Main Content */
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    flex: 1;
+}
+
+
+
+/* Form Styling */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #b0b0b0; /* Soft gray accent */
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #707070; /* Medium gray */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #505050; /* Darker gray */
+}
+
+/* Alert Message */
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #b0b0b0; /* Soft gray */
+    color: white;
+}
+
+/* User Cards */
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.user-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #b0b0b0; /* Neutral accent */
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.user-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.user-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.user-actions .edit{
+    color: rgb(5, 5, 131);
+}
+
+.user-actions .delete{
+    color: rgb(119, 4, 4);
+}
+
+.user-card h3 {
+    margin: 0 0 10px;
+    color: #505050; /* Medium gray */
+}
+
+.user-card p {
+    margin: 5px 0;
+}
+
+.user-action {
+    margin-top: 30px;
+}
+
+.user-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #505050; /* Medium gray */
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.user-actions a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding for header */
+    background-color: #f4f4f4; /* Background color for header */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.header-info {
+    display: flex; /* Use flexbox for header info */
+    align-items: center; /* Center items vertically */
+}
+
+.header-info span {
+    margin-right: 10px; /* Space between text and image */
+}
+
+.profile-pic {
+    width: 40px; /* Width of profile picture */
+    height: 40px; /* Height of profile picture */
+    border-radius: 50%; /* Make it circular */
+}
+
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding for header */
+    background-color: #f4f4f4; /* Background color for header */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.header-info {
+    display: flex; /* Use flexbox for header info */
+    align-items: center; /* Center items vertically */
+}
+
+.header-info span {
+    margin-right: 10px; /* Space between text and image */
+}
+
+.profile-pic {
+    width: 40px; /* Width of profile picture */
+    height: 40px; /* Height of profile picture */
+    border-radius: 50%; /* Make it circular */
+}
+
+/* Style the gender selection container */
+.gender-selection {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #333; /* Neutral text color */
+}
+
+/* Style each label to align the radio button on the left */
+.gender-selection label {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Reduce space for a more compact look */
+    cursor: pointer;
+}
+
+/* Ultra small custom radio button */
+.gender-selection input[type="radio"] {
+    appearance: none;
+    width: 5px; /* Tiny outer circle */
+    height: 5px;
+    border: 1px solid #666; /* Thinner border */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Add smaller inner dot when checked */
+.gender-selection input[type="radio"]:checked::before {
+    content: "";
+    width: 10px; /* Even smaller inner dot */
+    height: 10px;
+    background-color: #444; /* Inner dot color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .user-card {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+}
